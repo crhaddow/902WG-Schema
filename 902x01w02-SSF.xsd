@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <xsd:schema xmlns="urn:ccsds:schema:cssm:1.0.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:ccsds:schema:cssm:1.0.0" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0.0">
-	<xsd:include schemaLocation="902x13m1-AbsEvnt-TimCde.xsd"/>
-	<xsd:include schemaLocation="902x13m1-AbsEvnt-AbsParm.xsd"/>
-	<xsd:include schemaLocation="902x12m1-SmCmnEnt-InfEntHdr.xsd"/>
+	<xsd:include schemaLocation="902x12p11-CDE.xsd"/>
 	<!--********************************************************************************************************************** -->
 	<!--** Simple Schedule types and elements ** -->
 	<xsd:element name="simpleSchedule" type="SimpleScheduleType"/>

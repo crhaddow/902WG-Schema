@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsd:schema xmlns="urn:ccsds:schema:cssm:1.0.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:ccsds:schema:cssm:1.0.0" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0.0">
-	<xsd:include schemaLocation="902x12m1-SmCmnEnt-AbsEvnt.xsd"/>
-	<xsd:include schemaLocation="902x12m1-SmCmnEnt-CmnClss.xsd"/>
-	<xsd:include schemaLocation="902x12m1-SmCmnEnt-InfEntHdr.xsd"/>
+	<xsd:include schemaLocation="902x12p11-CDE.xsd"/>
 	<!-- include of Simple Schedule needed for service type definitions -->
-	<xsd:include schemaLocation="902x01b1TC1-SmplSchd.xsd"/>
+	<xsd:include schemaLocation="902x01w02-SSF.xsd"/>
 	<!-- the "glue" for the FRM schemas -->
 	<xsd:include schemaLocation="SanaRegistry/AbstractFrStrataParameterSets.xsd"/>
 	<!--********************************************************************************************************************** -->

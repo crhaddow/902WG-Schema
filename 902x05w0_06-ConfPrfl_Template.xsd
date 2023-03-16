@@ -3,9 +3,7 @@
 	<!--********************************************************************************************************************** -->
 	<!-- Common CCSDS CSS SM Includes -->
 	<!--********************************************************************************************************************** -->
-	<xsd:include schemaLocation="902x12m1-SmCmnEnt-CmnClss.xsd"/>
-	<xsd:include schemaLocation="902x12m1-SmCmnEnt-InfEntHdr.xsd"/>
-	<xsd:include schemaLocation="902x13m1-AbsEvnt-AbsParm.xsd"/>
+	<xsd:include schemaLocation="902x12p11-CDE.xsd"/>
 	<!-- for the abstract parameter definition -->
 	<xsd:include schemaLocation="902x05w0_06-ConfPrflCmnClss.xsd"/>
 	<!--********************************************************************************************************************** -->

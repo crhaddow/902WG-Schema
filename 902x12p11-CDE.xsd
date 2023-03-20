@@ -154,6 +154,7 @@
 		<xsd:attribute name="endTime" type="CcsdsAsciiTimeCodeBType"/>
 		<xsd:attribute name="purpose" type="xsd:string"/>
 		<xsd:attribute name="description" type="xsd:string"/>
+		<xsd:attribute name="securityClassification" type="xsd:string" use="optional"/>
 	</xsd:complexType>
 
 
@@ -162,11 +163,11 @@
 
 
 <!--********************************************************************************************************************** -->
-<!-- Define abstract Data Wrapper type                                                                                     -->
+<!-- Define abstract Wrapper type                                                                                     -->
 <!--********************************************************************************************************************** -->
 
-	<xsd:element name="abstractDataWrapper" type="AbstractDataWrapperType" abstract="true"/>
-	<xsd:complexType name="AbstractDataWrapperType">
+	<xsd:element name="abstractWrapper" type="AbstractWrapperType" abstract="true"/>
+	<xsd:complexType name="AbstractWrapperType">
 	</xsd:complexType>
 
 
@@ -174,10 +175,10 @@
 <!-- Define service agreement wrapper classes                                                                              -->
 <!--********************************************************************************************************************** -->
 
-	<xsd:element name="abstractServiceAgreementWrapper" type="AbstractServiceAgreementWrapperType" abstract="true" substitutionGroup="abstractDataWrapper"/>
+	<xsd:element name="abstractServiceAgreementWrapper" type="AbstractServiceAgreementWrapperType" abstract="true" substitutionGroup="abstractWrapper"/>
 	<xsd:complexType name="AbstractServiceAgreementWrapperType">
 		<xsd:complexContent>
-			<xsd:extension base="AbstractDataWrapperType">
+			<xsd:extension base="AbstractWrapperType">
 				<xsd:attribute name="serviceAgreementID" type="xsd:string" use="required"/>	
 			</xsd:extension>
 		</xsd:complexContent>
@@ -188,10 +189,10 @@
 <!-- Define report wrapper classes                                                                                         -->
 <!--********************************************************************************************************************** -->
 
-	<xsd:element name="abstractReportWrapper" type="AbstractReportWrapperType" abstract="true" substitutionGroup="abstractDataWrapper"/>
+	<xsd:element name="abstractReportWrapper" type="AbstractReportWrapperType" abstract="true" substitutionGroup="abstractWrapper"/>
 	<xsd:complexType name="AbstractReportWrapperType">
 		<xsd:complexContent>
-			<xsd:extension base="AbstractDataWrapperType">
+			<xsd:extension base="AbstractWrapperType">
 			</xsd:extension>
 		</xsd:complexContent>
 	</xsd:complexType>
@@ -201,10 +202,10 @@
 <!-- Define abstract data submission wrapper class                                                                         -->
 <!--********************************************************************************************************************** -->
 
-	<xsd:element name="abstractDataSubWrapper" type="AbstractDataSubWrapperType" abstract="true" substitutionGroup="abstractDataWrapper"/>
-	<xsd:complexType name="AbstractDataSubWrapperType">
+	<xsd:element name="abstractSubmissionWrapper" type="AbstractSubmissionWrapperType" abstract="true" substitutionGroup="abstractWrapper"/>
+	<xsd:complexType name="AbstractSubmissionWrapperType">
 		<xsd:complexContent>
-			<xsd:extension base="AbstractDataWrapperType">
+			<xsd:extension base="AbstractWrapperType">
 			</xsd:extension>
 		</xsd:complexContent>
 	</xsd:complexType>
@@ -214,10 +215,10 @@
 <!-- Define event sequence wrapper classes                                                                                 -->
 <!--********************************************************************************************************************** -->
 
-	<xsd:element name="abstractEventSeqWrapper" type="AbstractEventSeqWrapperType" abstract="true" substitutionGroup="abstractDataSubWrapper"/>
+	<xsd:element name="abstractEventSeqWrapper" type="AbstractEventSeqWrapperType" abstract="true" substitutionGroup="abstractSubmissionWrapper"/>
 	<xsd:complexType name="AbstractEventSeqWrapperType">
 		<xsd:complexContent>
-			<xsd:extension base="AbstractDataSubWrapperType">
+			<xsd:extension base="AbstractSubmissionWrapperType">
 				<xsd:attribute name="eventSequenceID" type="xsd:string" use="required"/>	
 			</xsd:extension>
 		</xsd:complexContent>
@@ -228,10 +229,10 @@
 <!-- Define configuration profile wrapper classes                                                                          -->
 <!--********************************************************************************************************************** -->
 
-	<xsd:element name="abstractConfigProfileWrapper" type="AbstractConfigProfileWrapperType" abstract="true" substitutionGroup="abstractDataSubWrapper"/>
+	<xsd:element name="abstractConfigProfileWrapper" type="AbstractConfigProfileWrapperType" abstract="true" substitutionGroup="abstractSubmissionWrapper"/>
 	<xsd:complexType name="AbstractConfigProfileWrapperType">
 		<xsd:complexContent>
-			<xsd:extension base="AbstractDataSubWrapperType">
+			<xsd:extension base="AbstractSubmissionWrapperType">
 				<xsd:attribute name="configurationProfileID" type="xsd:string" use="required"/>	
 			</xsd:extension>
 		</xsd:complexContent>
@@ -242,10 +243,10 @@
 <!-- Define DDOR Scan Pattern wrapper classes                                                                          -->
 <!--********************************************************************************************************************** -->
 
-	<xsd:element name="abstractDDORScanPatternWrapper" type="AbstractDDORScanPatternWrapperType" abstract="true" substitutionGroup="abstractDataSubWrapper"/>
+	<xsd:element name="abstractDDORScanPatternWrapper" type="AbstractDDORScanPatternWrapperType" abstract="true" substitutionGroup="abstractSubmissionWrapper"/>
 	<xsd:complexType name="AbstractDDORScanPatternWrapperType">
 		<xsd:complexContent>
-			<xsd:extension base="AbstractDataSubWrapperType">
+			<xsd:extension base="AbstractSubmissionWrapperType">
 				<xsd:attribute name="ddorScanPatternID" type="xsd:string" use="required"/>	
 			</xsd:extension>
 		</xsd:complexContent>
@@ -272,10 +273,10 @@
 <!-- Define Service Instance Configuration File wrapper classes                                                            -->
 <!--********************************************************************************************************************** -->
 
-	<xsd:element name="abstractSICFWrapper" type="AbstractSICFWrapperType" abstract="true" substitutionGroup="abstractDataSubWrapper"/>
+	<xsd:element name="abstractSICFWrapper" type="AbstractSICFWrapperType" abstract="true" substitutionGroup="abstractSubmissionWrapper"/>
 	<xsd:complexType name="AbstractSICFWrapperType">
 		<xsd:complexContent>
-			<xsd:extension base="AbstractDataSubWrapperType">
+			<xsd:extension base="AbstractSubmissionWrapperType">
 				<xsd:attribute name="sicfID" type="xsd:string" use="required"/>	
 			</xsd:extension>
 		</xsd:complexContent>
@@ -297,19 +298,19 @@
 <!-- Define trajectory data wrapper classes                                                                                -->
 <!--********************************************************************************************************************** -->
 
-	<xsd:element name="abstractTrajDataWrapper" type="AbstractTrajDataWrapperType" abstract="true" substitutionGroup="abstractDataSubWrapper"/>
-	<xsd:complexType name="AbstractTrajDataWrapperType">
+	<xsd:element name="abstractTrajWrapper" type="AbstractTrajWrapperType" abstract="true" substitutionGroup="abstractSubmissionWrapper"/>
+	<xsd:complexType name="AbstractTrajWrapperType">
 		<xsd:complexContent>
-			<xsd:extension base="AbstractDataSubWrapperType">
+			<xsd:extension base="AbstractSubmissionWrapperType">
 				<xsd:attribute name="trajectoryID" type="xsd:string" use="required"/>	
 			</xsd:extension>
 		</xsd:complexContent>
 	</xsd:complexType>
 
-	<xsd:element name="oemWrapper" type="OemWrapperType" substitutionGroup="abstractTrajDataWrapper"/>
+	<xsd:element name="oemWrapper" type="OemWrapperType" substitutionGroup="abstractTrajWrapper"/>
 	<xsd:complexType name="OemWrapperType">
 		<xsd:complexContent>
-			<xsd:extension base="AbstractTrajDataWrapperType">
+			<xsd:extension base="AbstractTrajWrapperType">
 				<xsd:sequence>
 					<xsd:element ref="oem" minOccurs="1" maxOccurs="1"/>		
 				</xsd:sequence>
@@ -317,10 +318,10 @@
 		</xsd:complexContent>
 	</xsd:complexType>
 
-	<xsd:element name="ommWrapper" type="OmmWrapperType" substitutionGroup="abstractTrajDataWrapper"/>
+	<xsd:element name="ommWrapper" type="OmmWrapperType" substitutionGroup="abstractTrajWrapper"/>
 	<xsd:complexType name="OmmWrapperType">
 		<xsd:complexContent>
-			<xsd:extension base="AbstractTrajDataWrapperType">
+			<xsd:extension base="AbstractTrajWrapperType">
 				<xsd:sequence>
 					<xsd:element ref="omm" minOccurs="1" maxOccurs="1"/>		
 				</xsd:sequence>
@@ -328,10 +329,10 @@
 		</xsd:complexContent>
 	</xsd:complexType>
 
-	<xsd:element name="opmWrapper" type="OpmWrapperType" substitutionGroup="abstractTrajDataWrapper"/>
+	<xsd:element name="opmWrapper" type="OpmWrapperType" substitutionGroup="abstractTrajWrapper"/>
 	<xsd:complexType name="OpmWrapperType">
 		<xsd:complexContent>
-			<xsd:extension base="AbstractTrajDataWrapperType">
+			<xsd:extension base="AbstractTrajWrapperType">
 				<xsd:sequence>
 					<xsd:element ref="opm" minOccurs="1" maxOccurs="1"/>		
 				</xsd:sequence>
@@ -339,10 +340,10 @@
 		</xsd:complexContent>
 	</xsd:complexType>
 
-	<xsd:element name="tleWrapper" type="TleWrapperType" substitutionGroup="abstractTrajDataWrapper"/>
+	<xsd:element name="tleWrapper" type="TleWrapperType" substitutionGroup="abstractTrajWrapper"/>
 	<xsd:complexType name="TleWrapperType">
 		<xsd:complexContent>
-			<xsd:extension base="AbstractTrajDataWrapperType">
+			<xsd:extension base="AbstractTrajWrapperType">
 				<xsd:sequence>
 					<xsd:element ref="tle" minOccurs="1" maxOccurs="1"/>		
 				</xsd:sequence>
@@ -357,10 +358,10 @@
 		</xsd:sequence>
 	</xsd:complexType>
 
-	<xsd:element name="otherTrajWrapper" type="OtherTrajWrapperType" substitutionGroup="abstractTrajDataWrapper"/>
+	<xsd:element name="otherTrajWrapper" type="OtherTrajWrapperType" substitutionGroup="abstractTrajWrapper"/>
 	<xsd:complexType name="OtherTrajWrapperType">
 		<xsd:complexContent>
-			<xsd:extension base="AbstractTrajDataWrapperType">
+			<xsd:extension base="AbstractTrajWrapperType">
 				<xsd:sequence>
 					<xsd:element name="trajData" type="TrajDataType" />
 				</xsd:sequence>
@@ -377,24 +378,6 @@
 	<xsd:element name="abstractSrvPkg" type="AbstractSrvPkgType" abstract="true" />
 	<xsd:complexType name="AbstractSrvPkgType">
 		<xsd:attribute name="sicfRef" type="xsd:string" use="required"/>	
-	</xsd:complexType>
-
-
-<!--********************************************************************************************************************** -->
-<!-- Define Offline service package classes                                                                                -->
-<!--********************************************************************************************************************** -->
-
-	<xsd:element name="offlineSrvPkgType1" type="OfflineSrvPkgType1Type" substitutionGroup="abstractSrvPkg" />
-	<xsd:complexType name="OfflineSrvPkgType1Type" >
-		<xsd:complexContent>
-			<xsd:extension base="AbstractSrvPkgType">
-				<xsd:sequence>
-					<!-- Permit a list of Modified Resource Parameters -->
-					<xsd:element ref="modResParm" minOccurs="0" maxOccurs="unbounded"/>
-				</xsd:sequence>
-				<xsd:attribute name="configProfileRef" type="xsd:string" use="required"/>	
-			</xsd:extension>
-		</xsd:complexContent>
 	</xsd:complexType>
 
 

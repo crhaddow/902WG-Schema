@@ -2,7 +2,7 @@
 <commsPlanningInfo xmlns="urn:ccsds:schema:cssm:1.0.0"
 					 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 					 xmlns:xmi="http://www.omg.org/XMI"
-					 xsi:schemaLocation="urn:ccsds:schema:cssm:1.0.0 902x02b01-CPIF.xsd" >
+					 xsi:schemaLocation="urn:ccsds:schema:cssm:1.0.0 902x02w02-CPIF.xsd" >
  			 
 
 	<commsPlanningInfoHeader originatingOrganization="ESOC"

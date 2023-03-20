@@ -2,7 +2,7 @@
 <servicePkgEntity xmlns="urn:ccsds:schema:cssm:1.0.0"
 				  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 				  xmlns:xmi="http://www.omg.org/XMI"
-   				  xsi:schemaLocation="urn:ccsds:schema:cssm:1.0.0 902x04w0_14-SrvPkgDataFmt.xsd">
+   				  xsi:schemaLocation="urn:ccsds:schema:cssm:1.0.0 902x04b01-SPDF.xsd">
  			 
 	<servicePkgHeader originatingOrganization="ESOC"
 					  generationTime="2021-056T21:38:00.000Z"

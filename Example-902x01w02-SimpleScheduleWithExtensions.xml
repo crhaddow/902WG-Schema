@@ -5,7 +5,7 @@
 				xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 				xmlns:xmi="http://www.omg.org/XMI"
 				xmlns:ems="http://esa.egos.ems"
-				xsi:schemaLocation="urn:ccsds:schema:cssm:1.0.0 902x01b1TC1-SmplSchd.xsd http://esa.egos.ems EmsExternal.xsd">
+				xsi:schemaLocation="urn:ccsds:schema:cssm:1.0.0 902x01w02-SSF.xsd http://esa.egos.ems EmsExternal.xsd">
 	<simpleScheduleHeader	originatingOrganization="RKPNI"
 							generationTime="2016-307T13:46:48.247Z"
 							status="TEST"

@@ -3,7 +3,7 @@
 					 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 					 xmlns:xmi="http://www.omg.org/XMI"
 					 xmlns:oth="urn:OtherTraj"
-   					 xsi:schemaLocation="urn:ccsds:schema:cssm:1.0.0 902x09w0_19-Smurf.xsd urn:OtherTraj Example-902x09w0_19-SMURFSubmitTrajDataOther.xsd">
+   					 xsi:schemaLocation="urn:ccsds:schema:cssm:1.0.0 902x09b01-SMURF.xsd urn:OtherTraj Example-902x09b01-SMURFSubmitTrajDataOther.xsd">
  			 
 	<srvMgtUtilReqHeader originatingOrganization="ESOC"
 						 generationTime="2020-165T10:05:00.000Z"
